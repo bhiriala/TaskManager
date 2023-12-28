@@ -1,0 +1,10 @@
+.contain{
+    background-color: #122537;
+    width: 380px;
+    height: 400px;
+    overflow-y: scroll;
+    border-radius: 10px;
+    border-top-right-radius: 6px;
+    padding-right: 20px;
+    
+}

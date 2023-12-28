@@ -1,0 +1,13 @@
+.navbar{
+    background-color: #122537;
+    height: 100px;
+}
+.text{
+    color: rgb(209, 208, 208);
+}
+.me-2{
+    border-radius: 30px;
+}
+.navbar-nav{
+    transform: translate(-95px,0);
+}
