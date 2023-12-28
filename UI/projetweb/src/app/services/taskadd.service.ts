@@ -11,9 +11,7 @@ export class TaskaddService {
    
   ];
   private todotasks: { taskname: string, owner: string, description: string }[] = [
-    { taskname: "ala", owner: "owner1", description: "description1" },
-    { taskname: "sarra", owner: "owner2", description: "description2" },
-    { taskname: "bhiri", owner: "owner3", description: "description3" }
+   
   ];
   
   addDoneTasks(taskn:string,own:string,descrip:string):void{
