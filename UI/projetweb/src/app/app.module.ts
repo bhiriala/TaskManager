@@ -18,7 +18,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { UserComponent } from './components/user/user.component';
 import { UsersComponent } from './components/users/users.component';
 import { AddcollaboratorService } from './services/addcollaborator.service';
-import { SigninComponent } from './signin/signin.component';
+import { SigninComponent } from './components/signin/signin.component';
+import { WelcomeComponent } from './components/welcome/welcome.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { SigninComponent } from './signin/signin.component';
     TasklistComponent,
     UserComponent,
     UsersComponent,
-    SigninComponent
+    SigninComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
