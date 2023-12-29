@@ -16,6 +16,7 @@
           
         </div>
       </div>
+
       <div *ngIf="list.nom === 'Done'">
         <div class="input-group input-group-sm mb-3">
           <span class="input-group-text" id="inputGroup-sizing-sm">Task Name</span>
@@ -31,7 +32,6 @@
         </div>
         <button type="button" class="btn btn-secondary button"  (click)="adddDoneTasks()">Apply</button>
       </div>
-
 
       <div *ngIf="list.nom === 'ToDo'">
         <div class="input-group input-group-sm mb-3">
@@ -49,7 +49,6 @@
         <button type="button" class="btn btn-secondary button" (click)="adddToDoTasks()">Apply</button>
       </div>
 
-
       <div *ngIf="list.nom === 'In Progress'">
         <div class="input-group input-group-sm mb-3">
           <span class="input-group-text" id="inputGroup-sizing-sm">Task Name</span>
@@ -65,6 +64,7 @@
         </div>
         <button type="button" class="btn btn-secondary button" (click)="adddInprogressTasks()">Apply</button>
       </div>
+
     </div>
   </div>
 </div>
