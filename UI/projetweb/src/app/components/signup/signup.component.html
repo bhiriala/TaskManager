@@ -11,33 +11,44 @@
         </a>
           
         <form class="col-4" (ngSubmit)="signUp()">
-            <h1 class="h3 mb-3 fw-normal">Sign Up</h1>
+
+          <h1 class="h3 mb-3 fw-normal">Sign Up</h1>
+
+          <div *ngIf="successMessage" class="alert alert-success" role="alert">
+            {{ successMessage }}
+          </div>
         
+          <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+            {{ errorMessage }}
+          </div>
+          
+
             <div class="mb-3 form-floating">
-                <input type="text" class="form-control" id="floatingName">
-                <label for="floatingName">Name</label>
+              <input type="text" class="form-control" id="floatingName" [(ngModel)]="name" name="name">
+              <label for="floatingName">Name</label>
             </div>
-        
+          
             <div class="mb-3 form-floating">
-                <input type="text" class="form-control" id="floatingSurname">
-                <label for="floatingSurname">Surname</label>
+              <input type="text" class="form-control" id="floatingSurname" [(ngModel)]="surname" name="surname">
+              <label for="floatingSurname">Surname</label>
             </div>
-        
+          
             <div class="mb-3 form-floating">
-                <input type="email" class="form-control" id="floatingInput">
-                <label for="floatingInput">Email address</label>
+              <input type="email" class="form-control" id="floatingInput" [(ngModel)]="email" name="email">
+              <label for="floatingInput">Email address</label>
             </div>
-        
+          
             <div class="mb-3 form-floating">
-                <input type="password" class="form-control" id="floatingPassword">
-                <label for="floatingPassword">Password</label>
+              <input type="password" class="form-control" id="floatingPassword" [(ngModel)]="password" name="password">
+              <label for="floatingPassword">Password</label>
             </div>
-           
+          
             <button class="btn active w-100 py-2" type="submit">Sign Up</button>
-        </form>
-        
+          </form>   
+
     </div>
-    
-    </div>
+
+
+</div>
     
     
