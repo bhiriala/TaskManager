@@ -3,9 +3,15 @@
     width: 380px;
     height: 400px;
     overflow-y: scroll;
-    border-radius: 10px;
+
+    /* border-radius: 10px;
     border-top-right-radius: 6px;
     padding-right: 20px;
     display: flex;
-    
+     */
 }
+
+.input-rows{
+    width: 300px;
+}
+
