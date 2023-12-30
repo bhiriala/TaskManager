@@ -1,6 +1,9 @@
 .main-container {
-  display: flex;
-  background-color: #122537;
+
+  /* bch tabda kad lpage */
+  height: 100%;
+  margin: 0;
+
 }
 .second-container{
   justify-content: center;
@@ -11,11 +14,25 @@
   /* border-top-right-radius: 30px;
   border-top-left-radius: 30px; */
   border-radius: 30px;
-  background:linear-gradient(to right, #122537,#2b5375,  #122537);
-  transform: translate(37px, 0);
+
+  background-color: rgb(255, 255, 255);
+  /* background:linear-gradient(to right, rgb(0, 0, 0) ,rgba(255,101,117,255), white); */
+  /* transform: translate(37px, 0); */
+
 }
 .users{
   transform: translate(13px,30px);
 }
 
-    
+h1 {
+  font-size: 4em;
+  color: #10002f; 
+  margin: 20px;
+  margin-left: 40%;
+ 
+}
+.container{
+  background-image: url("/assets/images/cover.jpeg");
+}
+
+

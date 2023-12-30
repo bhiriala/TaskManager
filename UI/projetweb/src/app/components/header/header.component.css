@@ -1,13 +1,19 @@
-.navbar{
-    background-color: #122537;
-    height: 100px;
-}
-.text{
-    color: rgb(209, 208, 208);
-}
-.me-2{
-    border-radius: 30px;
-}
-.navbar-nav{
-    transform: translate(-95px,0);
-}
+header {
+    background-color: #333; 
+    color: #fff; 
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .left-links a, .right-links span {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 100px;
+    cursor: pointer;
+  }
+  
+  .left-links a:hover, .right-links span:hover {
+    text-decoration: underline;
+  }

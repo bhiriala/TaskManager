@@ -15,7 +15,17 @@ export class SignupComponent {
 
   constructor(private signupService: SignupService) {}
 
+  successMessage: string | null = null;
+  errorMessage: string | null = null;
+
   signUp(): void {
+    this.user = {
+      name: this.name,
+      surname: this.surname,
+      email: this.email,
+      password: this.password,
+    };
+
     this.signupService.signUp(this.user).subscribe(
       (response) => {
         console.log('User signed up successfully', response);
@@ -24,5 +34,18 @@ export class SignupComponent {
         console.error('Error signing up', error);
       }
     );
+
+    this.signupService.signUp(this.user).subscribe(
+      (response) => {
+        console.log('User signed up successfully', response);
+        this.successMessage = 'Sign up successful!';
+        this.errorMessage = null;
+      },
+      (error) => {
+        console.error('Error signing up', error);
+        this.errorMessage = 'Error signing up. Please try again.';
+        this.successMessage = null;
+      }
+      );
+    }
   }
-}

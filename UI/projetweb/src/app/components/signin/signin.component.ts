@@ -1,27 +1,40 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signin',
   templateUrl: './signin.component.html',
   styleUrls: ['./signin.component.css']
 })
-export class SigninComponent{
+export class SigninComponent {
+  email = '';
+  password = '';
+  successMessage: string | null = null;
+  errorMessage: string | null = null;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private router: Router) {}
 
   onSubmit() {
     const formData = {
-      email: 'user@example.com',
-      password: 'password123',
+      email: this.email,
+      password: this.password,
     };
 
-    this.http.post('http://localhost:3000/api/login', formData)
-      .subscribe((response) => {
-        console.log(response);
-        // Handle the response from the server
-      });
-  }
+    this.http.post('http://localhost:3000/signin', formData)
+      .subscribe(
+        (response) => {
+          console.log(response);
+          this.successMessage = 'Sign in successful!';
+          this.errorMessage = null;
 
+          this.router.navigate(['/container']);
+        },
+        (error) => {
+          console.error(error);
+          this.errorMessage = 'Invalid email or password. Please try again.';
+          this.successMessage = null;
+        }
+      );
+  }
 }
